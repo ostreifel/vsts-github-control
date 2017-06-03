@@ -1,0 +1,67 @@
+{
+    "manifestVersion": 1,
+    "id": "vsts-github-control",
+    "version": "0.1.0",
+    "name": "VSTS GitHub Control",
+    "scopes": [ "vso.work", "vso.work_write" ],
+    "description": "Describe your extension.",
+    "publisher": "joezha",
+    "icons": {
+        "default": "img/logo.png"
+    },
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "tags": [
+        "Work Item",
+        "Work Item Group",
+        "GitHub"
+    ],
+    "content": {
+        "details": {
+            "path": "details.md"
+        }
+    },    
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/joezha/vsts-github-control"
+    },    
+    "branding": {
+        "color": "rgb(59, 59, 59)",
+        "theme": "dark"
+    },
+    "files": [
+        {
+            "path": "img",
+            "addressable": true
+        },
+        {
+            "path": "build",
+            "addressable": true
+        },
+        {
+            "path": "workItemGroup.html",
+            "addressable": true
+        }
+    ],
+    "categories": [
+        "Plan and track"
+    ],
+    "contributions": [
+        {
+            "id": "github-work-item-form-group",
+            "type": "ms.vss-work-web.work-item-form-group",
+            "description": "Custom work item form group",
+            "targets": [
+                "ms.vss-work-web.work-item-form"
+            ],
+            "properties": {
+                "name": "GitHub",
+                "uri": "workItemGroup.html",
+                "height": 600
+            }
+        }
+    ]
+}

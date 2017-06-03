@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "umd",
+        "sourceMap": false,
+        "target": "es5",
+        "jsx": "react",
+        "rootDir": "./scripts"
+    },
+    "filesGlob": [
+        "./scripts/**/*.ts",
+        "!**/*.tests.ts",
+        "./typings/index.d.ts"
+    ]
+}
