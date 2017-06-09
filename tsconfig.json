@@ -10,5 +10,9 @@
         "./scripts/**/*.ts",
         "!**/*.tests.ts",
         "./typings/index.d.ts"
+    ],
+    "files": [
+        "scripts/workItemGroup.ts",
+        "typings/index.d.ts"
     ]
 }
