@@ -1,3 +1,4 @@
+///<reference types="vss-web-extension-sdk" />
 import { IWorkItemNotificationListener, IWorkItemChangedArgs, IWorkItemLoadedArgs } from "TFS/WorkItemTracking/ExtensionContracts";
 
 //Default Token: f04842f319c0b865caa2c96f105c6898622a570f
