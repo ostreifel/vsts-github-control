@@ -43,15 +43,7 @@
             }
         },
 
-        clean: ["scripts/**/*.js", "*.vsix", "build", "test"],
-
-        karma: {
-            unit: {
-                configFile: 'karma.conf.js',
-                singleRun: true,
-                browsers: ["PhantomJS"]
-            }
-        }
+        clean: ["scripts/**/*.js", "*.vsix", "build", "test"]
     });
     
     grunt.loadNpmTasks("grunt-ts");
