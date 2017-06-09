@@ -1,11 +1,15 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <script src="build/VSS.SDK.min.js"></script>
 </head>
+
 <body>
+    <div class="github-group"></div>
+    
     <script type="text/javascript">
         // Initialize framework 
         VSS.init({
@@ -13,14 +17,13 @@
             usePlatformScripts: true,
             configureModuleLoader: true
         });
-        
+
         // Load main entry point for extension
-        VSS.require(["stripts/workItemGroup"], function () {
+        VSS.require(["build/workItemGroup"], function () {
             // Loading succeeded
             VSS.notifyLoadSucceeded();
         });
     </script>
-    <div class="github-group"></div>
-    </div>
 </body>
+
 </html>

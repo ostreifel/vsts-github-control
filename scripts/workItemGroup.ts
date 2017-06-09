@@ -1,22 +1,11 @@
-import { MessageHelper } from "./logic/messageHelper";
+import { IWorkItemNotificationListener, IWorkItemChangedArgs, IWorkItemLoadedArgs } from "TFS/WorkItemTracking/ExtensionContracts";
 
-var actionProvider =  {
-    getMenuItems: (context) => {
-        return [<IContributedMenuItem>{
-            title: "Work Item Menu Action",
-            action: (actionContext) => {
-                let workItemId = actionContext.id
-                    || (actionContext.ids && actionContext.ids.length > 0 && actionContext.ids[0])
-                    || (actionContext.workItemIds && actionContext.workItemIds.length > 0 && actionContext.workItemIds[0]);
-                    
-                if (workItemId) {
-                    let messageHelper = new MessageHelper();
-                    alert(messageHelper.format([workItemId]));
-                }
-            }
-        }];
-    }
+//Default Token: f04842f319c0b865caa2c96f105c6898622a570f
+
+const workItemContext: Partial<IWorkItemNotificationListener> = {
+    onSaved: (savedEventArgs: IWorkItemChangedArgs) => {},
+    onRefreshed: (refreshEventArgs: IWorkItemChangedArgs) => {},
+    onLoaded: (workItemLoadedArgs: IWorkItemLoadedArgs) => {}
 };
 
-// Register context menu action provider
-VSS.register(VSS.getContribution().id, actionProvider);
+VSS.register(VSS.getContribution().id, workItemContext);
